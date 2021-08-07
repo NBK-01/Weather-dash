@@ -11,6 +11,7 @@ body{
     background-color: var(--white);
 }
 
+
 .header {
     background-color: var(--accent);
     border-bottom:1px solid #181A27;
@@ -22,6 +23,14 @@ body{
     box-shadow: var(--shadow);
     border-radius: 10px;
 }
+
+
+.card-container {
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+}
+
+
 #current-weather{
     box-shadow: var(--shadow);
     border-radius: 10px;
