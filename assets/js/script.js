@@ -162,6 +162,14 @@ function fiveDay(cityid){
 }
 
 
+$(document).on("click",goToHistory);
 
+function goToHistory(event){
+    var historyListItem=event.target;
+    if (event.target.matches("li")){
+        city=historyListItem.textContent.trim();
+        currentWeather(city);
+    }
 
+}
 
