@@ -1,9 +1,15 @@
 :root{
     --accent: #1FC8A9;
-    --white: #E6E6E6;
+    --white: #FFEFE5;
     --black: #181A27;
+    --shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
 }
 
+body{
+    background-color: var(--white);
+}
 
 .header {
     background-color: var(--accent);
@@ -13,8 +19,13 @@
 }
 
 .search-container {
-    background-color: var(--white);
+    box-shadow: var(--shadow);
     border-radius: 10px;
+}
+#current-weather{
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    padding: 30px;
 }
 
 #clear-cities {
