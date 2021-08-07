@@ -118,6 +118,14 @@ function loadHistory(){
 
 }
 
+$("#clear-cities").on("click",clearCities);
+
+function clearCities(event){
+    event.preventDefault();
+    sCity=[];
+    localStorage.removeItem("cityname");
+    document.location.reload();
+}
 
 function fiveDay(cityid){
     var dayover = false;
