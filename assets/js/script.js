@@ -23,7 +23,7 @@ function displayWeather(event){
 $("#city-search").on("click",displayWeather);
 
 function currentWeather(city){
-    // Here we build the URL so we can get a data from server side.
+   
     var apiURL= "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + apiKey;
     $.ajax({
         url:apiURL,
@@ -73,6 +73,17 @@ function currentWeather(city){
         }
 
     });
+}
+
+function UVIndex(ln,lt){
+    
+    var uvIndexUrl="https://api.openweathermap.org/data/2.5/uvi?appid="+ apiKey +"&lat="+lt+"&lon="+ln;
+    $.ajax({
+            url: uvIndexUrl,
+            method:"GET"
+            }).then(function(response){
+                $(uvCurr).html(response.value);
+            });
 }
 
 
