@@ -55,3 +55,14 @@ body{
     transition: 0.2s;
 }
 
+.favorable{
+    background-color: green;
+}
+
+.moderate{
+    background-color: orange;
+}
+
+.severe{
+    background-color:red;
+}
