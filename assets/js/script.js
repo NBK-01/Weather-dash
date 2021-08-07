@@ -83,7 +83,16 @@ function UVIndex(ln,lt){
             method:"GET"
             }).then(function(response){
                 $(uvCurr).html(response.value);
+                if(response.value <= 5){
+                    $(uvCurr).attr("class", "favorable")
+                }else if(response.value >= 5 && response.value <= 10 ){
+                    $(uvCurr).attr("class", "moderate")
+                }
+                else if(response.value > 11){
+                    $(uvCurr).attr("class", "severe")
+                }
             });
+    
 }
 
 function find(c){
