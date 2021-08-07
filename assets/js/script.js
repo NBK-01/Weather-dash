@@ -61,13 +61,13 @@ function currentWeather(city){
                 sCity.push(city.toUpperCase()
                 );
                 localStorage.setItem("cityname",JSON.stringify(sCity));
-                addToList(city);
+                historyAppend(city);
             }
             else {
                 if(find(city)>0){
                     sCity.push(city.toUpperCase());
                     localStorage.setItem("cityname",JSON.stringify(sCity));
-                    addToList(city);
+                    historyAppend(city);
                 }
             }
         }
@@ -85,6 +85,39 @@ function UVIndex(ln,lt){
                 $(uvCurr).html(response.value);
             });
 }
+
+function find(c){
+    for (var i=0; i<sCity.length; i++){
+        if(c.toUpperCase()===sCity[i]){
+            return -1;
+        }
+    }
+    return 1;
+}
+
+$(window).on("load",loadHistory);
+
+function historyAppend(c){
+    var searchHistory= $("<li>"+c.toUpperCase()+"</li>");
+    $(searchHistory).attr("class","search-list-item");
+    $(searchHistory).attr("data-value",c.toUpperCase());
+    $(".search-history").append(searchHistory);
+}
+
+function loadHistory(){
+    $("ul").empty();
+    var sCity = JSON.parse(localStorage.getItem("cityname"));
+    if(sCity!==null){
+        sCity=JSON.parse(localStorage.getItem("cityname"));
+        for(i=0; i<sCity.length;i++){
+            historyAppend(sCity[i]);
+        }
+        city=sCity[i-1];
+        currentWeather(city);
+    }
+
+}
+
 
 function fiveDay(cityid){
     var dayover = false;
@@ -110,6 +143,8 @@ function fiveDay(cityid){
         
     });
 }
+
+
 
 
 
