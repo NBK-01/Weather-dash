@@ -1,15 +1,35 @@
 :root{
     --accent: #1FC8A9;
-    --white: #FFEFE5;
+    --white: #E6E6E6;
     --black: #181A27;
 }
-body{
 
-    background-color: var(--white);
-}
 
 .header {
     background-color: var(--accent);
     border-bottom:1px solid #181A27;
     border-radius: 5px;
+    color: var(--white);
 }
+
+.search-container {
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+#clear-cities {
+    background-color: var(--accent);
+    border: none !important;
+}
+
+#clear-cities:hover, #city-search:hover{
+    background-color: var(--white);
+    color:#181A27;
+}
+
+#city-search{
+    background-color: var(--accent);
+    border: none !important;
+    color: var(--white);
+}
+
