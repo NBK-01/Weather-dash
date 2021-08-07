@@ -66,3 +66,7 @@ body{
 .severe{
     background-color:red;
 }
+
+.search-list-item{
+    cursor: pointer;
+}
