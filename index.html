@@ -6,15 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 <body>
 
-    <div class="jumbotron container-fluid mt-2 text-center p-2 header">
+    <div class="jumbotron container-fluid text-center p-2 header">
         <h1> Weather Dashboard </h1>
     </div>    
+    
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-sm-4 search-container">
+                
+                <h4 class="pt-1"><strong>Search for a City:</strong></h4>
+                
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control"id="search-city">
+                    <div class="input-group-append">
+                        <button class=" btn" id="city-search"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+               
+                <button class=" btn btn-primary" type="button" id="clear-cities"><i class="fa fa-trash"> </i></button>
+                <ul class="search-history">
 
+                </ul>
+            </div>   
+            
 
 
 
