@@ -1,6 +1,6 @@
 :root{
     --accent: #1FC8A9;
-    --white: #FFEFE5;
+    --white: #C7C6C4;
     --black: #181A27;
     --shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
@@ -16,7 +16,6 @@ body{
     background-color: var(--accent);
     border-bottom:1px solid #181A27;
     border-radius: 5px;
-    color: var(--white);
 }
 
 .search-container {
@@ -52,7 +51,7 @@ body{
 #city-search{
     background-color: var(--accent);
     border: none;
-    color: var(--white);
+    color: white;
     transition: 0.2s;
 }
 
