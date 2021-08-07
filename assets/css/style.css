@@ -30,17 +30,20 @@ body{
 
 #clear-cities {
     background-color: var(--accent);
-    border: none !important;
+    border: none;
+    transition: 0.2s;
 }
 
 #clear-cities:hover, #city-search:hover{
     background-color: var(--white);
     color:#181A27;
+    border: 2px solid var(--black);
 }
 
 #city-search{
     background-color: var(--accent);
-    border: none !important;
+    border: none;
     color: var(--white);
+    transition: 0.2s;
 }
 
