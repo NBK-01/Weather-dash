@@ -1,4 +1,15 @@
 :root{
     --accent: #1FC8A9;
     --white: #FFEFE5;
+    --black: #181A27;
+}
+body{
+
+    background-color: var(--white);
+}
+
+.header {
+    background-color: var(--accent);
+    border-bottom:1px solid #181A27;
+    border-radius: 5px;
 }
